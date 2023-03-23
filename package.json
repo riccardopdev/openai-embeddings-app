@@ -1,0 +1,23 @@
+{
+  "name": "openai-embeddings-app",
+  "version": "1.0.0",
+  "description": "A nodejs app to implement openai API embeddings in local files.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riccardopdev/openai-embeddings-app.git"
+  },
+  "keywords": [
+    "openai",
+    "node"
+  ],
+  "author": "Riccardo Pierantonietti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riccardopdev/openai-embeddings-app/issues"
+  },
+  "homepage": "https://github.com/riccardopdev/openai-embeddings-app#readme"
+}

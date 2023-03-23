@@ -1,0 +1,1 @@
+# NodeJS app for OpenAI API Embeddings

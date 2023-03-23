@@ -1,1 +1,2 @@
-# NodeJS app for OpenAI API Embeddings
+# NodeJS app for openai API Embeddings
+This is a NodeJS app that uses the openai API to implement embeddings by reading data from local files (.csv), calling the openai embeddings API and writing the results to a new file.

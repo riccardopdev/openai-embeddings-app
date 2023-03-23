@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/riccardopdev/openai-embeddings-app/issues"
   },
-  "homepage": "https://github.com/riccardopdev/openai-embeddings-app#readme"
+  "homepage": "https://github.com/riccardopdev/openai-embeddings-app#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1"
+  }
 }

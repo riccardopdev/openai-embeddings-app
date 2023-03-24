@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/riccardopdev/openai-embeddings-app#readme",
   "dependencies": {
+    "csv": "^6.2.8",
     "dotenv": "^16.0.3",
     "openai": "^3.2.1"
   }

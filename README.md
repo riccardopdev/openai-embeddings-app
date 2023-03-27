@@ -7,7 +7,7 @@ OpenAI's embeddings produce a vector representation of a given input that can th
 The scope of this project is to read data from the rows of a one-column .csv file, then call the OpenAI embeddings endpoint by providing the text input from each row and get the embeddings vector values. The final data with both the text and embeddings values is then written into new .csv and .json files.  
 
 Embeddings can be used together with Prompt Engineering to provide the appropriate context when making requests to OpenAI completion endpoints.  
-For more information about Prompt Engineering read this [article](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_embeddings.ipynb?utm_source=frontendfresh&utm_medium=email&utm_campaign=customizing-an-openai-chatbot-with-embeddings) from openai-cookbook.  
+For more information about Prompt Engineering read this [article](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_embeddings.ipynb?utm_source=frontendfresh&utm_medium=email&utm_campaign=customizing-an-openai-chatbot-with-embeddings) from the openai-cookbook.  
 
 ## Setup
 This project uses the OpenAI API and requires an OpenAI API Key. OpenAI uses the API Key to charge customers for each request to the API. To create an OpenAI account and Key, visit the OpenAI [website](https://platform.openai.com/overview).  

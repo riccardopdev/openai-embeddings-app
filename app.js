@@ -1,3 +1,5 @@
+// Make sure you have your OpenAI API Key value for OPENAI_API_KEY environment variable in an .env file. Otherwise replace below line of process.env.OPENAI_API_KEY with your OpenAI API Key value
+
 // IMPORT PACKAGES
 require('dotenv').config();
 const { Configuration, OpenAIApi } = require('openai');

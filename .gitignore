@@ -1,5 +1,3 @@
 node_modules
 .env
-data/input/data.csv
-data/output/data.json
-data
+data/output/*

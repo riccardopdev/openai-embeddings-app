@@ -12,7 +12,10 @@
   },
   "keywords": [
     "openai",
-    "node"
+    "node",
+    "embeddings",
+    "prompt engineering",
+    "machine learning"
   ],
   "author": "Riccardo Pierantonietti",
   "license": "ISC",

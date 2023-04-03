@@ -74,14 +74,14 @@ const createAPIBatchRequest = () => {
 
 const submitAPIBatchesRequest = () => {
     console.log(`There are a total of ${APIRequestBatches.length} batch(es).`);
-    console.log(`This will take at least ${(APIRequestBatches.length * TIME_LIMIT_FOR_API_REQUEST)/60000} minutes.\n`);
+    console.log(`This will take at least ${((APIRequestBatches.length * TIME_LIMIT_FOR_API_REQUEST)/60000).toFixed(2)} minutes.\n`);
 
     //Loop through each batch
     for (let i = 0; i < APIRequestBatches.length; i++) {
         //Set a time interval between batches
         setTimeout(() => {
             console.log(`Submitting batch #${i+1} to OpenAI Embedding API.`);
-            //Loop through the items of each batch and 
+            //Loop through the items of each batch
             for (let j = 0; j < APIRequestBatches[i].length; j++) {
                 embeddingsRequests.push(getEmbeddings(APIRequestBatches[i][j])); //For each item push a new embedding request (Promise) into the embeddingsRequests array. Later we'll check when all promises have been fulfilled with Promise.all()
             }
@@ -123,25 +123,32 @@ const getEmbeddings = async (inputText) => {
 }
 
 const writeOutputCSV = () => {
-    console.log('Writing data to new csv...');
+    console.log('Writing data to new .csv...');
+
     stringify(embeddingsResults, {header: true}, (err, output) => {
         try {
             fs.writeFileSync(OUTPUT_DATA_CSV_FILE, output);
         } catch (error) {
+            console.log('Error while writing .csv file.');
             console.log(error);
         }
         
     });
-    console.log('Data writing to CSV completed.\n');
+    console.log('Data writing to .csv completed.\n');
 }
 
 const writeOutputJSON = () => {
-    console.log('Writing data to new JSON...');
+    console.log('Writing data to new .json...');
     const stringifiedJSON = JSON.stringify(embeddingsResults);
 
-    fs.writeFile(OUTPUT_DATA_JSON_FILE, stringifiedJSON, 'utf-8', () => {
-        console.log('Data writing to JSON completed.\n');
-    });
+    try {
+        fs.writeFile(OUTPUT_DATA_JSON_FILE, stringifiedJSON, 'utf-8', () => {
+            console.log('Data writing to .json completed.\n');
+        });
+    } catch (error) {
+        console.log('Error while writing .json file.');
+        console.log(error);
+    }
 }
 
 startReadingInputCSV();

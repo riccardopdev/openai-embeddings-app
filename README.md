@@ -15,7 +15,7 @@ The time interval between each submitted batch is set with the constant: ```TIME
 For more information about Prompt Engineering read this [article](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_embeddings.ipynb?utm_source=frontendfresh&utm_medium=email&utm_campaign=customizing-an-openai-chatbot-with-embeddings) from the openai-cookbook.  
 
 ## Setup
-This project uses the OpenAI API and requires an OpenAI API Key. OpenAI uses the API Key to charge customers for each request to the API. To create an OpenAI account and Key, visit the OpenAI [website](https://platform.openai.com/overview).  
+This project uses the OpenAI API and requires an **OpenAI API Key**. OpenAI uses the API Key to charge customers for each request to the API. To create an OpenAI account and Key, visit the OpenAI [website](https://platform.openai.com/overview).  
 
 Once you have an OpenAI API Key, create a **.env** file in the project's root folder and insert a line as below example:
 

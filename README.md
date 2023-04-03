@@ -2,11 +2,14 @@
 This is a NodeJS app that uses the OpenAI API to implement embedding of input data. The source data is provided by a local file (.csv), and the results are written into new .csv and .json files.  
 
 ## What are embeddings?
-OpenAI's embeddings produce a vector representation of a given input that can then be used by machine learning models to measure the similarity between text strings. An embedding is a vector (list) of floating-point numbers. The distance between two vectors measures their similarity and can be used to compare text strings.  
+OpenAI's embeddings produce a vector representation of a given input text that can then be used by machine learning models to measure the similarity between text strings. An embedding is a vector (list) of floating-point numbers. The distance between two vectors measures their similarity and can be used to compare text strings.  
 
 The scope of this project is to read data from the rows of a one-column .csv file, then call the OpenAI embeddings endpoint by providing the text input from each row and get the embeddings vector values. The final data with both the text and embeddings values is then written into new .csv and .json files.  
 
-**Note:** OpenAI seems to have a limit of possible simultaneous requests. If you get an error when submitting a large number of rows from the .csv file, try to break down the embeddings submissions in smaller sets.
+**Note:** OpenAI currently has a limit of 60 API requests per minute.  
+The application creates batches of API requests to be submitted at different interval of time.  
+The number of API requests for each interval is set with the constant: ```NUM_OF_API_REQUEST_LIMIT```  
+The time interval between each batch is set with the constant: ```TIME_LIMIT_FOR_API_REQUEST```  
 
 Embeddings can be used together with Prompt Engineering to provide the appropriate context when making requests to OpenAI completion endpoints.  
 For more information about Prompt Engineering read this [article](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_embeddings.ipynb?utm_source=frontendfresh&utm_medium=email&utm_campaign=customizing-an-openai-chatbot-with-embeddings) from the openai-cookbook.  
